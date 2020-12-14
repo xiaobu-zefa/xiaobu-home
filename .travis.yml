@@ -8,6 +8,7 @@ branches:
     - master # build master branch only
 script:
   - hexo generate # generate static files
+  - cp CNAME /public/CNAME
 deploy:
   provider: pages
   skip-cleanup: true
