@@ -24,4 +24,7 @@ valine:
   appId: Xzvozzq9Js3RB8cdgGFP7RP6-gzGzoHsz
   appKey: U47lrRiTDWUlYtJeL0NytIrc
 
+# 关掉自带代码高亮
+highlight:
+  enable: false
 ################################### <配置主题 ###################################
