@@ -11,9 +11,9 @@ favicon: /favicon.ico
 # 主题菜单
 # 需要新建页面：hexo new page "页面地址"
 menu:
-  文章: /project
-  友情链接: /links
-  关于: /about
+  文章: /
+  友情链接: /links/
+  关于: /about/
   Github: https://github.com/xiaobucvg
 
 # valine 评论 , 使用说明见 https://valine.js.org
