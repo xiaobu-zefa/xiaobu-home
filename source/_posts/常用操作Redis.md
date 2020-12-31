@@ -1,5 +1,5 @@
 ---
-title: redis常用操作
+title: 常用操作Redis
 date: 2020-12-31 14:32:52
 tags:
 ---
