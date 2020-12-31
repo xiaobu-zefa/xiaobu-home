@@ -4,7 +4,7 @@ date: 2020-12-31 14:34:35
 tags:
 ---
 
-## 一、安装es
+## 一、Elasticsearch
 #### 1.1 下载并安装ES的yum公钥
 ```
 rpm --import https://packages.elastic.co/GPG-KEY-elasticsearch
@@ -51,3 +51,49 @@ systemctl start elasticsearch.service
 ```
 
 #### 1.7 ip:9200
+
+## 二、Kibana
+#### 2.1 下载并导入公开签署密钥
+```
+rpm --import https://artifacts.elastic.co/GPG-KEY-elasticsearch
+```
+
+#### 2.2 指定仓库信息
+编辑文件
+```
+vim /etc/yum.repos.d/kibana.repo
+```
+输入
+```
+[kibana-6.x]
+name=Kibana repository for 6.x packages
+baseurl=https://artifacts.elastic.co/packages/6.x/yum
+gpgcheck=1
+gpgkey=https://artifacts.elastic.co/GPG-KEY-elasticsearch
+enabled=1
+autorefresh=1
+type=rpm-md
+```
+
+#### 2.3 安装
+```
+yum install kibana -y
+```
+
+#### 2.5 配置
+编辑文件
+```
+vim /etc/kibana/kibana.yml
+```
+修改下列项
+```
+server.port: 5601                              # 开放端口
+server.host: "0.0.0.0"                         # 允许所有主机访问
+elasticsearch.url: "http://localhost:19204"    # es的服务地址
+```
+
+#### 2.6 开启服务
+```
+systemctl start kibana
+```
+
