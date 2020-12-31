@@ -1,5 +1,5 @@
 ---
-title: mysql常用操作
+title: 常用操作MySQL
 date: 2020-12-31 14:31:23
 tags:
 ---

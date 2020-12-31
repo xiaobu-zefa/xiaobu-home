@@ -1,5 +1,5 @@
 ---
-title: linux常用操作
+title: 常用操作Linux
 date: 2020-12-31 14:22:58
 tags:
 ---
