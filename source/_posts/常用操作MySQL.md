@@ -1,7 +1,7 @@
 ---
 title: 常用操作MySQL
 date: 2020-12-31 14:31:23
-tags:
+tags: notes
 ---
 **Centos 安装 Mysql**
 ```

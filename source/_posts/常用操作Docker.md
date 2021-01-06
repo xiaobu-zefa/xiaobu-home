@@ -1,7 +1,7 @@
 ---
 title: 常用操作Docker
 date: 2020-12-31 14:29:40
-tags:
+tags: notes
 ---
 **删除已经停止的容器**
 ```

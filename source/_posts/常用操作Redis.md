@@ -1,7 +1,7 @@
 ---
 title: 常用操作Redis
 date: 2020-12-31 14:32:52
-tags:
+tags: notes
 ---
 
 **如果要安装最新的redis，需要安装Remi的软件源，官网地址：http://rpms.famillecollet.com/**

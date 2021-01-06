@@ -1,7 +1,7 @@
 ---
 title: 常用操作Maven
 date: 2020-12-31 14:28:24
-tags:
+tags: notes
 ---
 **本地Jar包做成Maven依赖**
 ```
