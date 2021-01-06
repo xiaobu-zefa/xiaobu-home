@@ -1,8 +1,16 @@
 ---
-title: centos7静默安装oracle数据库
-date: 2020-12-14 13:55:34
+title: Centos7静默安装Oracle数据库的方法
+catalog: true
+date: 2020-10-02 02:34:17
+subtitle: Centos7静默安装Oracle数据库的方法
+top: 0
+header-img: /img/header_img/lml_bg.jpg
 tags:
+- blog
+categories:
+- blog
 ---
+
 ## 一、前言
 静默安装就是不使用图形化界面的安装，全部用命令与配置文件进行安装的方式。
 如果你在 Windows 下安装过 Oracle 数据库，理解起来可能会比较简单。
@@ -13,7 +21,7 @@ tags:
 系统环境配置  |  安装数据库软件  |  配置静默监听  |  静默方式创建数据库同时建立实例
 
 ## 三、详细步骤
-#### 3.1 系统环境配置
+### 3.1 系统环境配置
 **3.1.1 安装依赖**
 这些是需要的依赖，需要先安装好，不能漏掉。
 ```shell
@@ -142,7 +150,7 @@ export ORACLE_BASE ORACLE_HOME ORACLE_SID PATH ORACLE_UNQNAME
 192.168.1.1                   CentOS
 ```
 
-#### 3.2 安装数据库软件
+### 3.2 安装数据库软件
 **3.2.1 编辑静默安装响应文件**
 静默安装数据库需要用到静默安装响应文件，静默安装响应文件就像使用图形化界面安装的时候点击的下一步、下一步一样，只不过是提前配置好，安装程序运行的时候就可以根据这个文件来做安装了。
 切换到 `root` 用户，使用命令  `vim /opt/download/database/response/db_install.rsp` 打开静默安装响应文件。按照以下内容修改里面的内容：
@@ -177,7 +185,7 @@ DECLINE_SECURITY_UPDATES=true
 然后按照提示，打开一个新的终端，使用 `root` 身份执行上面的两个脚本。
 至此，数据库的安装就完成了。
 
-#### 3.3 配置静默监听
+### 3.3 配置静默监听
 按照静默监听文件配置静默监听。
 切换到 `oracle` 用户，运行命令：
 ```shell
@@ -190,7 +198,7 @@ DECLINE_SECURITY_UPDATES=true
 出现类似下面的信息就是正在监听。
 ![正在监听](https://upload-images.jianshu.io/upload_images/15228836-d8d1de1d6bd9650a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-#### 3.4 静默方式创建数据库同时建立实例
+### 3.4 静默方式创建数据库同时建立实例
 **3.4.1 编辑静默安装响应文件**
 切换回 `root` 用户，编辑静默安装响应文件。
 ```shell

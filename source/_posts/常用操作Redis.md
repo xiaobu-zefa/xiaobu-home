@@ -1,7 +1,14 @@
 ---
-title: 常用操作Redis
-date: 2020-12-31 14:32:52
-tags: notes
+title: 常用操作-Redis
+catalog: true
+date: 2021-01-06 02:34:17
+subtitle: Redis 的常用操作
+top: 999
+header-img: /img/header_img/lml_bg.jpg
+tags:
+- notes
+categories:
+- notes
 ---
 
 **如果要安装最新的redis，需要安装Remi的软件源，官网地址：http://rpms.famillecollet.com/**

@@ -1,8 +1,16 @@
 ---
-title: 常用操作Docker
-date: 2020-12-31 14:29:40
-tags: notes
+title: 常用操作-Docker
+catalog: true
+date: 2021-01-01 02:34:17
+subtitle: Docker 的常用操作
+top: 999
+header-img: /img/header_img/lml_bg.jpg
+tags:
+- notes
+categories:
+- notes
 ---
+
 **删除已经停止的容器**
 ```
 docker container prune

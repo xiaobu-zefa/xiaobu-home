@@ -1,8 +1,16 @@
 ---
-title: maven项目使用本地jar包
-date: 2020-12-14 13:57:07
+title: Maven项目使用本地Jar文件
+catalog: true
+date: 2020-10-03 02:34:17
+subtitle: Maven项目使用本地Jar文件
+top: 0
+header-img: /img/header_img/lml_bg.jpg
 tags:
+- blog
+categories:
+- blog
 ---
+
 ## 一、前言
 构建项目的时候避免不了使用一些本地 Jar 包，这些Jar包不在中央仓库里存在，我们在本地添加了依赖后，本机使用虽然没问题，但是如果想用比如 Docker 自动化构建这种远程构建的话就会出现问题，针对这种情况，可以采用以下几个步骤解决：
 ## 二、将本地Jar包安装成Maven依赖

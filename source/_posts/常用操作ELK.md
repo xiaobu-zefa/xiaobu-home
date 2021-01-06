@@ -1,7 +1,14 @@
 ---
-title: 常用操作ELK
-date: 2020-12-31 14:34:35
-tags: notes
+title: 常用操作-ELK
+catalog: true
+date: 2021-01-02 02:34:17
+subtitle: ELK 的常用操作
+top: 999
+header-img: /img/header_img/lml_bg.jpg
+tags:
+- notes
+categories:
+- notes
 ---
 
 ## 一、Elasticsearch

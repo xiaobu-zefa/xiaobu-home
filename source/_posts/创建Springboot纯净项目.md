@@ -1,8 +1,16 @@
 ---
-title: 创建Springboot纯净项目
-date: 2020-12-14 13:05:29
+title: 创建一个纯净的SpringBoot项目
+catalog: true
+date: 2020-10-01 02:34:17
+subtitle: 创建一个纯净的SpringBoot项目
+top: 0
+header-img: /img/header_img/lml_bg.jpg
 tags:
+- blog
+categories:
+- blog
 ---
+
 ## 一、前言
 Spring 是 Java 开发非常流行且优秀的框架，一般用来做 Web 开发，但是如果我们只想使用 Spring 提供的容器环境和方便的工具组件，不想启用 Tomcat 、数据库等繁杂的组件该如何做？
 ## 二、去掉数据库
