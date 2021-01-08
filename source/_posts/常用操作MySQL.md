@@ -3,7 +3,6 @@ title: 常用操作-MySQL
 catalog: true
 date: 2021-01-05 02:34:17
 subtitle: MySQL 的常用操作
-top: 999
 header-img: /img/header_img/lml_bg.jpg
 tags:
 - notes

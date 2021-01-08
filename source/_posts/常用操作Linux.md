@@ -3,7 +3,6 @@ title: 常用操作-Linux
 catalog: true
 date: 2021-01-03 02:34:17
 subtitle: Linux 的常用操作
-top: 999
 header-img: /img/header_img/lml_bg.jpg
 tags:
 - notes
