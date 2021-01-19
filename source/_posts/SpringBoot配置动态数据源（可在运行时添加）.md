@@ -1,5 +1,5 @@
 ---
-title: '''SpringBoot配置动态数据源（可在运行时添加）'''
+title: SpringBoot配置动态数据源（可在运行时添加）
 catalog: true
 date: 2021-01-14 16:51:17
 subtitle:
