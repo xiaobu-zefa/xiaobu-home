@@ -140,21 +140,21 @@ ENTRYPOINT ["nginx", "-c"] # 定参
 CMD ["/etc/nginx/nginx.conf"] # 变参
 ```
 - 不传参运行
-  ```
-  docker run  nginx:test
-  ```
-  容器内会默认运行以下命令，启动主进程。
-  ```
-  nginx -c /etc/nginx/nginx.conf
-  ```
+```
+docker run  nginx:test
+```
+容器内会默认运行以下命令，启动主进程。
+```
+nginx -c /etc/nginx/nginx.conf
+```
 - 传参运行
-  ```
-  docker run  nginx:test -c /etc/nginx/new.conf
-  ```
-  容器内会默认运行以下命令，启动主进程(/etc/nginx/new.conf:假设容器内已有此文件)
-  ```
-  nginx -c /etc/nginx/new.conf
-  ```
+```
+docker run  nginx:test -c /etc/nginx/new.conf
+```
+容器内会默认运行以下命令，启动主进程(/etc/nginx/new.conf:假设容器内已有此文件)
+```
+nginx -c /etc/nginx/new.conf
+```
 
 ## 四、Docker Compose相关
 
