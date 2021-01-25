@@ -31,7 +31,7 @@ docker push 所有人/镜像名:标签
 docker build -t 镜像名:标签 .
 ```
 
-***1.5 删除镜像**
+**1.5 删除镜像**
 ```
 docker rmi 镜像名:标签名
 ```
@@ -128,7 +128,7 @@ HEALTHCHECK [选项] CMD <命令> : 这边 CMD 后面跟随的命令使用，可
 ONBUILD <其它指令>
 ```
 
-| Dockerfile 的指令每执行一次都会在 docker 上新建一层。所以过多无意义的层，会造成镜像膨胀过大。
+> Dockerfile 的指令每执行一次都会在 docker 上新建一层。所以过多无意义的层，会造成镜像膨胀过大。
 
 **3.2 ENTRYPOINT搭配CMD指令**
 一般是变参才会使用 CMD ，这里的 CMD 等于是在给 ENTRYPOINT 传参。
@@ -158,13 +158,13 @@ CMD ["/etc/nginx/nginx.conf"] # 变参
 
 ## 四、Docker Compose相关
 
-| Compose 是用于定义和运行多容器 Docker 应用程序的工具。通过 Compose，您可以使用 YML 文件来配置应用程序需要的所有服务。然后，使用一个命令，就可以从 YML 文件配置中创建并启动所有服务。
+> Compose 是用于定义和运行多容器 Docker 应用程序的工具。通过 Compose，您可以使用 YML 文件来配置应用程序需要的所有服务。然后，使用一个命令，就可以从 YML 文件配置中创建并启动所有服务。
 
-| Compose 使用的三个步骤：
-|
-| - 使用 Dockerfile 定义应用程序的环境。
-| - 使用 docker-compose.yml 定义构成应用程序的服务，这样它们可以在隔离环境中一起运行。
-| - 最后，执行 docker-compose up 命令来启动并运行整个应用程序。
+> Compose 使用的三个步骤：
+>
+> - 使用 Dockerfile 定义应用程序的环境。
+> - 使用 docker-compose.yml 定义构成应用程序的服务，这样它们可以在隔离环境中一起运行。
+> - 最后，执行 docker-compose up 命令来启动并运行整个应用程序。
 
 **4.1 Compose 安装、配置、运行**
 ```
