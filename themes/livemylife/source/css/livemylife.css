@@ -321,6 +321,7 @@ li.archive-list-item:hover a {
 }
 
 .gitter-open-chat-button {
+  display: none;
   bottom: 1.875rem;
   right: 2.5rem;
   font-size: .75019rem;
