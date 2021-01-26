@@ -108,7 +108,7 @@ friends: [
 ## Doc:https://github.com/gitalk/gitalk/blob/master/readme-cn.md
 ##
 gitalk:
-  owner: xiaobucvg                          # 'GitHub repo owner'
+  owner: 'xiaobucvg'                          # 'GitHub repo owner'
   admin: 'xiaobucvg'                            # 'GitHub repo'
   repo: 'xiaobucvg.github.io'                           # ['GitHub repo owner and collaborators, only these guys can initialize github issues']
   clientID: 'ed3cb94d33f231dbf1e7'                       # 'GitHub Application Client ID'
