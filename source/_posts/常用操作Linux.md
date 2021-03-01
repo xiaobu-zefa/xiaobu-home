@@ -4,6 +4,7 @@ catalog: true
 date: 2021-01-03 02:34:17
 subtitle: Linux 的学习笔记
 header-img: /img/header_img/lml_bg.jpg
+top: 0
 tags:
 - 学习笔记
 categories:

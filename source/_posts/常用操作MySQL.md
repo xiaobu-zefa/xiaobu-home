@@ -4,6 +4,7 @@ catalog: true
 date: 2021-01-05 02:34:17
 subtitle: MySQL 的学习笔记
 header-img: /img/header_img/lml_bg.jpg
+top: 0
 tags:
 - 学习笔记
 categories:
@@ -30,7 +31,7 @@ mysqladmin -u root password 密码    **设置root密码
 CREATE USER  'username'@'host'   IDENTIFIED BY  'password';
 ```
 
-### 2.2 授予用户所有权限 （数据库.数据表）**
+### 2.2 授予用户所有权限 （数据库.数据表）
 ```
 GRANT ALL ON  *.*  TO   'username'@'host'   
 ```

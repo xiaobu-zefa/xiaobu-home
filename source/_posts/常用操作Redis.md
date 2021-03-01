@@ -4,6 +4,7 @@ catalog: true
 date: 2021-01-06 02:34:17
 subtitle: Redis 的学习笔记
 header-img: /img/header_img/lml_bg.jpg
+top: 0
 tags:
 - 学习笔记
 categories:
