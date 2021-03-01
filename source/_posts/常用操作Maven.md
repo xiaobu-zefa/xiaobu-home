@@ -1,8 +1,8 @@
 ---
-title: 常用操作-Maven
+title: 学习笔记-Maven
 catalog: true
 date: 2021-01-04 02:34:17
-subtitle: Maven 的常用操作
+subtitle: Maven 的学习笔记
 header-img: /img/header_img/lml_bg.jpg
 tags:
 - notes

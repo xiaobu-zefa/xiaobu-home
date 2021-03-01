@@ -1,8 +1,8 @@
 ---
-title: 常用操作-ELK
+title: 学习笔记-ELK
 catalog: true
 date: 2021-01-02 02:34:17
-subtitle: ELK 的常用操作
+subtitle: ELK 的学习笔记
 header-img: /img/header_img/lml_bg.jpg
 tags:
 - notes
