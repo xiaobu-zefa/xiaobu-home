@@ -5,9 +5,9 @@ date: 2021-01-01 02:34:17
 subtitle: Docker 的学习笔记
 header-img: /img/header_img/lml_bg.jpg
 tags:
-- notes
+- 学习笔记
 categories:
-- notes
+- 学习笔记
 ---
 ## 一、镜像操作
 

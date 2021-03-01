@@ -6,9 +6,9 @@ subtitle: 创建一个纯净的SpringBoot项目
 top: 0
 header-img: /img/header_img/lml_bg.jpg
 tags:
-- blog
+- Java教程
 categories:
-- blog
+- Java教程
 ---
 
 ## 一、前言

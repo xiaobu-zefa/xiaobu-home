@@ -5,9 +5,9 @@ date: 2021-01-06 02:34:17
 subtitle: Redis 的学习笔记
 header-img: /img/header_img/lml_bg.jpg
 tags:
-- notes
+- 学习笔记
 categories:
-- notes
+- 学习笔记
 ---
 
 **如果要安装最新的redis，需要安装Remi的软件源，官网地址：http://rpms.famillecollet.com/**

@@ -6,9 +6,9 @@ subtitle: Centos7静默安装Oracle数据库的方法
 top: 0
 header-img: /img/header_img/lml_bg.jpg
 tags:
-- blog
+- 运维教程
 categories:
-- blog
+- 运维教程
 ---
 
 ## 一、前言

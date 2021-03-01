@@ -5,9 +5,9 @@ date: 2021-01-04 02:34:17
 subtitle: Maven 的学习笔记
 header-img: /img/header_img/lml_bg.jpg
 tags:
-- notes
+- 学习笔记
 categories:
-- notes
+- 学习笔记
 ---
 
 **本地Jar包做成Maven依赖**

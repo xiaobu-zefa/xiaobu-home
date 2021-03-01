@@ -5,10 +5,8 @@ date: 2020-10-03 02:34:17
 subtitle: Maven项目使用本地Jar文件
 top: 0
 header-img: /img/header_img/lml_bg.jpg
-tags:
-- blog
-categories:
-- blog
+tags: Java教程
+categories: Java教程
 ---
 
 ## 一、前言
