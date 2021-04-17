@@ -38,11 +38,11 @@ archives-img: img/header_img/archive_bg2.jpg
 
 
 # Favicon settings
-favicon: img/avatar/roguerabbit.jpg
+favicon: img/avatar/favicon.jpg
 
 
 # Signature Setup
-signature: true # show signature
+signature: false # show signature
 signature-img: img/signature/vincent-white.png
 
 
@@ -64,9 +64,9 @@ github_username: xiaobucvg
 # Sidebar Settings
 sidebar: true   # whether or not using Sidebar.
 sidebar-about-description: ""
-sidebar-avatar: img/avatar/fatpeople.jpg    # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: img/avatar/wechat-code.jpg    # use absolute URL, seeing it's used in both `/` and `/about/`
 widgets:
-- visitor   # busuanzi: https://busuanzi.ibruce.info/
+- visitor        # busuanzi: https://busuanzi.ibruce.info/
 - featured-tags
 - short-about
 - recent-posts
