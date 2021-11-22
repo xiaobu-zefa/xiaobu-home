@@ -1,10 +1,9 @@
 ---
-title: 学习笔记-Docker
+title: 学习笔记-docker
 catalog: true
 date: 2021-01-01 02:34:17
 subtitle: Docker 的学习笔记
 header-img: /img/header_img/lml_bg.jpg
-top: 0
 tags:
 - 学习笔记
 categories:
