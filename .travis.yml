@@ -7,7 +7,7 @@ branches:
   only:
     - master # build master branch only
 install:
-  - yarn
+  - npm install
 script:
   - hexo generate # generate static files
   - cp CNAME public/
