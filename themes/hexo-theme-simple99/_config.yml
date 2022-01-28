@@ -18,13 +18,13 @@ social:
     href: https://github.com/xiaobucvg
   - name: 掘金
     icon_url: https://store.xiaobu.site/store-blog/juejin.png
-    href: https://juejin.cn/user/3210229685698430/posts
+    href: https://juejin.cn/user/70018878936135
   - name: 知乎
     icon_url: https://store.xiaobu.site/store-blog/zhihu.png
-    href: https://www.zhihu.com
+    href: https://www.zhihu.com/people/aaaa-gui-gui
   - name: CSDN
     icon_url: https://store.xiaobu.site/store-blog/csdn.png
-    href: https://blog.csdn.net/ZSH_jerry
+    href: https://blog.csdn.net/weixin_38844199
   - name: email
     icon_url: https://store.xiaobu.site/store-blog/Gmail.png
     href: www.1714005186@gmail.com
@@ -36,10 +36,10 @@ social:
     href:
   - name: 微博
     icon_url: https://store.xiaobu.site/store-blog/weibo.png
-    href:
+    href: https://weibo.com/u/6067755914
   - name: 简书
     icon_url: https://store.xiaobu.site/store-blog/jianshu.png
-    href:
+    href: https://www.jianshu.com/u/1a1d86b8b698
 
 # 网站icon图标
 favicon: https://store.xiaobu.site/store-blog/favicon.ico

@@ -5,12 +5,17 @@ node_js:
 cache: npm
 branches:
   only:
-    - master # build master branch only
+    - master
+
+### 安装过程(nodejs会自动使用yarn,这里显示定义使用npm)
 install:
   - npm install
+
+### 执行过程(nodejs会自动使用npm run test)
 script:
-  - hexo generate # generate static files
+  - hexo generate
   - cp CNAME public/
+
 deploy:
   provider: pages
   skip-cleanup: true
