@@ -1,0 +1,82 @@
+<div class="row">
+    <div class="main index">
+        <% page.posts.each(function(post, i){ %>
+
+            <article class="list-item">
+
+                <!-- 置顶 -->
+                <% if (post.top) { %>
+                    <span class="zhiding">置顶</span>
+                <% } %>
+
+                <!-- 预览图与标题-->
+                <a href="<%- url_for(post.path) %>">
+                    <!-- 是否显示首页图片 -->
+                    <% if(post.cover){ %>
+                        <header class="post-header with-cover"
+                                style="background-image:url('<%- post.cover %>')"></header>
+                    <% } %>
+                    <!-- 标题 -->
+                    <h1 class="post-title">
+                        <span><%= post.title || __('no-title') %></span>
+                    </h1>
+                </a>
+
+                <!-- 额外信息 -->
+                <section class="post-info">
+
+                    <!-- 发布时间 -->
+                    <span class="post-date">发布于:</span>
+                    <span class="post-date-text"><%- date(post.date, ' YYYY-MM-DD') %></span>
+
+                    <!-- 分类 -->
+                    <% if (post.categories && post.categories.length && theme.show_post_category){ %>
+                        <span class="post-category">分类:</span>
+                        <%- list_categories(post.categories, {
+                            show_count: false,
+                            class: 'post-category',
+                            style: 'none',
+                            separator: ' '
+                        }) %>
+                    <% } %>
+
+                    <!-- 标签 -->
+                    <% if (post.tags && post.tags.length && theme.show_post_tags){ %>
+                        <%- list_tags(post.tags, {show_count: false, class: 'post-tag'}) %>
+                    <% } %>
+
+                </section>
+
+
+                <div class="post-main">
+                    <div class="post-item">
+                        <!-- 导读部分 -->
+                        <section class="post-abstract">
+                            <% if(post.excerpt){ %>
+                                <%- strip_html(post.excerpt) %>
+                            <% }else{ %>
+                                <%- strip_html(truncate(post.content, {length: 150})) %>
+                            <% } %>
+                        </section>
+                        <!-- 点击阅读更多 -->
+                        <span class="read-more btn"><a href="<%- url_for(post.path) %>">阅读更多...</a></span>
+                    </div>
+                </div>
+
+            </article>
+
+        <% }) %>
+
+        <!-- 分页部分 -->
+        <%- partial('partials/pagination') %>
+
+    </div>
+
+    <!-- aside部分 -->
+    <% if(theme.sidebar && theme.widgets.length){ %>
+        <aside>
+            <%- partial('partials/widgets') %>
+        </aside>
+    <% } %>
+</div>
+

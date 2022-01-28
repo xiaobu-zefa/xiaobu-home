@@ -1,0 +1,36 @@
+<section class="widget-wrap">
+    <h3 class="widget-title">简介</h3>
+    <div class="widget">
+        <div class="notice">
+            <img class="notice-img" src="<%- theme.authorimg %>">
+
+            <%- theme.notice %>
+
+            <!-- 社交链接 -->
+            <p class="notice-item">
+                <% theme.social.forEach(function(data){ %>
+                    <span><a target="_blank" href="<%- data.href %>"><img src="<%- data.icon_url%>" alt="<%-data.name%>" title="<%-data.name%>"></a></span>
+                <% }) %>
+            </p>
+
+            <ul class="statistics">
+                <li>
+                    <span>文章</span>
+                    <a href="./archives"><%- site.posts.length %></a>
+                </li>
+                <li>
+                    <span>字数</span>
+                    <a><%= totalcount(site) %></a>
+                </li>
+                <li>
+                    <span>访客</span>
+                    <a id="busuanzi_value_site_uv"></a>
+                </li>
+            </ul>
+
+            <div id="follow" class="button">
+                <a target="_blank" href="https://github.com/xiaobucvg">关注</a>
+            </div>
+        </div>
+    </div>
+</section>
