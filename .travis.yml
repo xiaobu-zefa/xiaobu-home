@@ -6,6 +6,8 @@ cache: npm
 branches:
   only:
     - master # build master branch only
+install:
+  - yarn
 script:
   - hexo generate # generate static files
   - cp CNAME public/
