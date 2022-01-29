@@ -30,10 +30,12 @@ social:
     href: www.1714005186@gmail.com
   - name: 微信
     icon_url: https://store.xiaobu.site/store-blog/weixin.png
-    href:
+    href: https://store.xiaobu.site/store-blog/%E5%BE%AE%E4%BF%A1%E4%BF%A1%E6%81%AF.jpg
+    pop: true
   - name: QQ
     icon_url: https://store.xiaobu.site/store-blog/QQ.png
-    href:
+    href: https://store.xiaobu.site/store-blog/QQ%E4%BF%A1%E6%81%AF.jpg
+    pop: true
   - name: 微博
     icon_url: https://store.xiaobu.site/store-blog/weibo.png
     href: https://weibo.com/u/6067755914
