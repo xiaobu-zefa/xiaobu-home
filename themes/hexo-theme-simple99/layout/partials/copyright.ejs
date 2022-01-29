@@ -7,8 +7,8 @@
     </div>
     <div>
         <strong>本文链接：</strong>
-        <a href="<%= config.url %>/<%= page.slug %>">
-            <%= config.url %>/post/<%= page.slug %>
+        <a href="<%= config.url %><%= url_for(page.path) %>">
+            <%= config.url %><%= url_for(page.path) %>
         </a>
     </div>
     <div>
