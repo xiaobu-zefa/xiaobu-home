@@ -60,21 +60,21 @@
 
     <!-- 目录 -->
     <% if(page.toc){ %>
-    <aside>
-        <div id="toc"></div>
-        <script>
-            $(function () {
-                var elm = $('#toc');
-                var startPos = $(elm).offset().top;
-                $.event.add(window, "scroll", function () {
-                    var p = $(window).scrollTop();
-                    $(elm).css('margin-left', '0px');
-                    $(elm).css('position', ((p) > startPos) ? 'fixed' : 'static');
-                    $(elm).css('top', ((p) > startPos) ? '20px' : '')
+        <aside>
+            <div id="toc"></div>
+            <script>
+                $(function () {
+                    var elm = $('#toc');
+                    var startPos = $(elm).offset().top;
+                    $.event.add(window, "scroll", function () {
+                        var p = $(window).scrollTop();
+                        $(elm).css('margin-left', '0px');
+                        $(elm).css('position', ((p) > startPos) ? 'fixed' : 'static');
+                        $(elm).css('top', ((p) > startPos) ? '20px' : '')
+                    })
                 })
-            })
-        </script>
-    </aside>
+            </script>
+        </aside>
     <% } %>
 
 </div>

@@ -9,7 +9,9 @@
             <!-- 社交链接 -->
             <p class="notice-item">
                 <% theme.social.forEach(function(data){ %>
-                    <span><a target="_blank" href="<%- data.href %>"><img src="<%- data.icon_url%>" alt="<%-data.name%>" title="<%-data.name%>"></a></span>
+                    <span><a target="_blank" href="<%- data.href %>"><img src="<%- data.icon_url %>"
+                                                                          alt="<%- data.name %>"
+                                                                          title="<%- data.name %>"></a></span>
                 <% }) %>
             </p>
 
