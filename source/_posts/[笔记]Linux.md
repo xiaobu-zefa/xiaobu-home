@@ -1,10 +1,11 @@
 ---
 title: '[笔记]Linux'
 date: 2021-01-03 02:34:17
+toc: true
 excerpt: Linux使用过程中产生的笔记...
 tags:
 - 笔记
-  categories:
+categories:
 - 笔记
 ---
 
