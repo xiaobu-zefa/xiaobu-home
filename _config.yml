@@ -102,25 +102,7 @@ theme: hexo-theme-simple99
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 
-# 自动提交站点信息到搜索引擎
 deploy:
-  - type: us_baidu_deployer
-  - type: us_bing_deployer
-
-url_submission:
-  enable: true
-  type: 'all' # latest or all( latest: modified pages; all: posts & pages)
-  channel: ['baidu', 'bing'] # Included channels are `baidu`, `google`, `bing`, `shenma`
-  prefix: ['/'] # URL prefix
-  count: 10 # Submit limit
-  proxy: '' # Set the proxy used to submit urls to Google
-  urls_path: 'submit_url.txt' # URL list file path
-  baidu_token: '39x5IaqdB8AaYlQQ' # Baidu private key
-  bing_token: '01c4d6a2627f4d20889bfffe63678d7a' # Bing private key
-  google_key: '' # Google key path (e.g. `google_key.json` or `data/google_key.json`)
-  shenma_token: ''
-  shenma_user: '' # ShenMa user_name
-  sitemap: 'baidusitemap.xml' # Sitemap path(e.g. the url is like this https://abnerwei.com/baidusitemap.xml, you can fill in `baidusitemap.xml`)
 
 # 生成网站地图
 Plugins:
