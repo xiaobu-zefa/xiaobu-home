@@ -14,6 +14,7 @@ install:
 ### 执行过程(nodejs会自动使用npm run test)
 script:
   - hexo generate
+  - hexo d
   - cp CNAME public/
 
 deploy:
