@@ -3,10 +3,8 @@ title: '[笔记]Linux'
 date: 2021-01-03 02:34:17
 toc: true
 excerpt: Linux使用过程中产生的笔记...
-tags:
-- 笔记
-categories:
-- 笔记
+tags: 笔记
+categories: 笔记
 ---
 
 ## 一、系统信息查看相关

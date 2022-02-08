@@ -3,10 +3,8 @@ title: '[笔记]MySQL'
 date: 2021-01-03 02:34:17
 excerpt: MySQL使用过程中产生的笔记...
 toc: true
-tags:
-- 笔记
-categories:
-- 笔记
+tags: 笔记
+categories: 笔记
 ---
 
 ## 一、安装与部署

@@ -3,10 +3,8 @@ title: '[笔记]Apache ZooKeeper'
 date: 2022-01-01 00:00:00
 excerpt: Apache ZooKeeper 使用过程中产生的笔记...
 toc: true
-tags:
-- 笔记
-categories:
-- 笔记
+tags: 笔记
+categories: 笔记
 ---
 
 ## (一) 基本命令
