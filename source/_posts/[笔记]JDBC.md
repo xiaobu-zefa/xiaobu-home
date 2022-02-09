@@ -1,8 +1,7 @@
 ---
 title: '[笔记]JDBC'
-toc: true
 date: 2018-02-10 02:34:17
-excerpt: JDBC使用过程中产生的笔记...
+excerpt: 'JDBC使用过程中产生的笔记...'
 tags: 笔记
 categories: 笔记
 ---

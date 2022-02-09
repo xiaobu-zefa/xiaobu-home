@@ -3,7 +3,7 @@ title: '[框架学习]Hibernate - 5 查询与连接池.md'
 date: 2019-02-15 00:00:00
 categories: 框架学习
 tags: 框架学习
-toc: true
+excerpt: 'Hibernate是一个开放源代码的对象关系映射框架，它对[JDBC](https://baike.baidu.com/item/JDBC/485214)进行了非常轻量级的对象封装，它将POJO与数据库表建立映射关系，是一个全自动的orm框架，hibernate可以自动生成SQL语句，自动执行，使得Java程序员可以随心所欲的使用对象编程思维来操纵数据库...'
 ---
 
 ## (一) 描述

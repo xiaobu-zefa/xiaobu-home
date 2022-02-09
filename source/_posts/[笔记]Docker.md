@@ -1,8 +1,7 @@
 ---
 title: '[笔记]Docker'
-toc: true
 date: 2021-01-01 02:34:17
-excerpt: Docker使用过程中产生的笔记...
+excerpt: 'Docker使用过程中产生的笔记...'
 tags: 笔记
 categories: 笔记
 ---
