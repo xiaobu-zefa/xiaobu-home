@@ -270,15 +270,6 @@ widgets:
         # Where should the widget be placed, left sidebar or right sidebar
         position: right
         type: tags
-    # Google FeedBurner email subscription widget configurations
-    -
-        # Where should the widget be placed, left sidebar or right sidebar
-        position: left
-        type: subscribe_email
-        # Hint text under the email input
-        description:
-        # Feedburner ID
-        feedburner_id: ''
     # Google AdSense unit configurations
     #    -
     #        # Where should the widget be placed, left sidebar or right sidebar

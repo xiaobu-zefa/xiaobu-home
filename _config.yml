@@ -76,7 +76,12 @@ deploy: null
 Plugins:
   - hexo-generator-baidu-sitemap
   - hexo-generator-sitemap
+  - hexo-generator-feed
 baidusitemap:
   path: baidusitemap.xml
 sitemap:
   path: sitemap.xml
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
