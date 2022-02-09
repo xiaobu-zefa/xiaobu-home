@@ -8,7 +8,7 @@ logo:
 # Page metadata configurations
 head:
     # URL or path to the website's icon
-    favicon: https://store.xiaobu.site/store-blog/favicon.ico
+    favicon: https://store.xiaobu.site/store-blog/%E7%BD%91%E7%AB%99favicon.png
     # Web application manifests configuration
     # https://developer.mozilla.org/en-US/docs/Web/Manifest
     manifest:
@@ -148,7 +148,7 @@ article:
     # Article licensing block
     licenses:
         Creative Commons:
-            icon: fab fa-creative-c ommons
+            icon: fab fa-creative-commons
             url: https://creativecommons.org/
         Attribution:
             icon: fab fa-creative-commons-by
