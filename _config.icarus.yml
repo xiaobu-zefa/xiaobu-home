@@ -221,12 +221,15 @@ widgets:
             Github:
                 icon: fab fa-github
                 url: https://github.com/xiaobucvg
-            Wechat:
-                icon: fab fa-weixin
-                url:
+            Zhihu:
+                icon: fab fa-zhihu
+                url: https://www.zhihu.com/people/aaaa-gui-gui
             Weibo:
                 icon: fab fa-weibo
                 url: https://weibo.com/u/6067755914
+            Email:
+                icon: fas fa-envelope
+                url: mailto:www.1714005186@gmail.com
     # Table of contents widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
