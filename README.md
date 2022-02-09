@@ -24,3 +24,11 @@
 - 原创分享
 - 心得体会
 - 框架学习
+
+## (三) 其他信息
+
+主题: [ICARUS-点击直达](https://ppoffice.github.io/hexo-theme-icarus/)
+
+图床: [七牛云-点击直达](https://www.qiniu.com/)
+
+评论: [畅言云评-点击直达](http://changyan.kuaizhan.com/)
