@@ -1,5 +1,5 @@
 ---
-title: '[框架学习]Hibernate - 1 入门.md'
+title: '[框架学习]Hibernate - 1 入门'
 date: 2019-02-10 00:00:00
 categories: 框架学习
 tags: 框架学习

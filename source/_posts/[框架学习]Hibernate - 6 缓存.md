@@ -1,5 +1,5 @@
 ---
-title: '[框架学习]Hibernate - 6 缓存.md'
+title: '[框架学习]Hibernate - 6 缓存'
 date: 2019-02-16 00:00:00
 categories: 框架学习
 tags: 框架学习

@@ -1,5 +1,5 @@
 ---
-title: '[框架学习]Hibernate - 2 映射.md'
+title: '[框架学习]Hibernate - 2 映射'
 date: 2019-02-11 00:00:00
 categories: 框架学习
 tags: 框架学习

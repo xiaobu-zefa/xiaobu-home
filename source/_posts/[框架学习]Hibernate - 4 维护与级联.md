@@ -1,5 +1,5 @@
 ---
-title: '[框架学习]Hibernate - 4 维护与级联.md'
+title: '[框架学习]Hibernate - 4 维护与级联'
 date: 2019-02-14 00:00:00
 categories: 框架学习
 tags: 框架学习

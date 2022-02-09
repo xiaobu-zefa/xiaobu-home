@@ -1,5 +1,5 @@
 ---
-title: '[框架学习]Hibernate - 5 查询与连接池.md'
+title: '[框架学习]Hibernate - 5 查询与连接池'
 date: 2019-02-15 00:00:00
 categories: 框架学习
 tags: 框架学习
