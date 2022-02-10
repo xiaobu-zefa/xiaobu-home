@@ -114,7 +114,7 @@ navbar:
         关于: /about
     # Links to be shown on the right of the navigation bar
     links:
-        Download on GitHub:
+        Show on GitHub:
             icon: fab fa-github
             url: https://github.com/xiaobucvg/xiaobucvg.github.io
 # Page footer configurations
@@ -309,7 +309,7 @@ plugins:
         tracking_id:
     # BuSuanZi site/page view counter
     # https://busuanzi.ibruce.info
-    busuanzi: true
+    busuanzi: false
     # CNZZ statistics
     # https://www.umeng.com/web
     cnzz:
