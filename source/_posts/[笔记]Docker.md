@@ -34,7 +34,13 @@ docker rmi 镜像名:标签名
 
 **1.6 配置阿里云docker镜像加速**
 ```
-sudo mkdir -p /etc/docker sudo tee /etc/docker/daemon.json <<-'EOF' { "registry-mirrors": ["https://uswxfj2s.mirror.aliyuncs.com"] } EOF sudo systemctl daemon-reload sudo systemctl restart docker
+sudo mkdir -p /etc/docker 
+sudo vim /etc/docker/daemon.json
+### 输入内容 >>>
+{ "registry-mirrors": ["https://uswxfj2s.mirror.aliyuncs.com"] }
+### 输入内容 <<<
+sudo systemctl daemon-reload
+sudo systemctl restart docker
 ```
 
 ## 二、容器操作
