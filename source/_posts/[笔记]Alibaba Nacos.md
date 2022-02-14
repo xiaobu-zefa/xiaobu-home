@@ -17,14 +17,14 @@ $ docker pull nacos/nacos-server
 
 ### 1.2 创建要挂载的目录
 ```shell
-$ sudo mkdir -p /docker/mount/nacos/init.d
+$ sudo mkdir -p /docker/mount/nacos/conf
 $ sudo mkdir -p /docker/mount/nacos/logs
 ```
 
 ### 1.3 编写自定义配置文件
 ```properties
-$ cd /docker/mount/nacos/init.d
-$ sudo vim custom.properties
+$ cd /docker/mount/nacos/conf
+$ sudo vim application.properties
 ```
 配置文件内容：(修改数据库地址，用户名，密码)
 ```
@@ -66,5 +66,5 @@ nacos.naming.expireInstance=true
 
 ### 1.4 启动Docker容器
 ```shell
-docker  run --name nacos -d -p 8848:8848 --privileged=true --restart=always -e JVM_XMS=256m -e JVM_XMX=256m -e MODE=standalone -e PREFER_HOST_MODE=hostname -v /docker/mount/nacos/logs:/home/nacos/logs -v /docker/mount/nacos/init.d/custom.properties:/home/nacos/init.d/custom.properties nacos/nacos-server
+docker run --name nacos -d -p 8848:8848 --privileged=true --restart=always -e JVM_XMS=256m -e JVM_XMX=256m -e MODE=standalone -e PREFER_HOST_MODE=hostname -v /docker/mount/nacos/logs:/home/nacos/logs -v /docker/mount/nacos/conf/application.properties:/home/nacos/conf/application.properties nacos/nacos-server
 ```
