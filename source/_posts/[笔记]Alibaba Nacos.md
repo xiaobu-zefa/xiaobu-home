@@ -11,7 +11,6 @@ categories: 笔记
 ### 1.1 拉取Docker最新镜像
 
 ```shell
-$ sudo mkdir -p /docker
 $ docker pull nacos/nacos-server
 ```
 
@@ -66,5 +65,5 @@ nacos.naming.expireInstance=true
 
 ### 1.4 启动Docker容器
 ```shell
-docker run --name nacos -d -p 8848:8848 --privileged=true --restart=always -e JVM_XMS=256m -e JVM_XMX=256m -e MODE=standalone -e PREFER_HOST_MODE=hostname -v /docker/mount/nacos/logs:/home/nacos/logs -v /docker/mount/nacos/conf/application.properties:/home/nacos/conf/application.properties nacos/nacos-server
+docker run --name nacos -d -p 8848:8848 -p 9848:9848 --privileged=true --restart=always -e JVM_XMS=256m -e JVM_XMX=256m -e MODE=standalone -e PREFER_HOST_MODE=hostname -v /docker/mount/nacos/logs:/home/nacos/logs -v /docker/mount/nacos/conf/application.properties:/home/nacos/conf/application.properties nacos/nacos-server
 ```
