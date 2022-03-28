@@ -5,34 +5,9 @@ excerpt: 'Docker使用过程中产生的笔记...'
 tags: 笔记
 categories: 笔记
 ---
-## 一、镜像操作
 
-**1.1 启动一个镜像同时进入容器**
-```
-docker run -it 镜像名 /bin/bash
-```
+## 一、配置阿里云镜像加速
 
-**1.2 容器生成新镜像**
-```
-docker commit 容器ID 所有人/镜像名:标签
-```
-
-**1.3 提交镜像到镜像仓库**
-```
-docker push 所有人/镜像名:标签
-```
-
-**1.4 构建镜像**
-```
-docker build -t 镜像名:标签 .
-```
-
-**1.5 删除镜像**
-```
-docker rmi 镜像名:标签名
-```
-
-**1.6 配置阿里云docker镜像加速**
 ```
 sudo mkdir -p /etc/docker 
 sudo vim /etc/docker/daemon.json
@@ -43,14 +18,42 @@ sudo systemctl daemon-reload
 sudo systemctl restart docker
 ```
 
-## 二、容器操作
+## 二、镜像操作
 
-**2.1 进入已经存在的容器**
+**2.1 启动一个镜像并以root进入容器**
+```
+docker run -it --user root 镜像名 /bin/bash
+```
+
+**2.2 从容器生成新镜像**
+```
+docker commit 容器ID 所有人/镜像名:标签
+```
+
+**2.3 提交镜像到镜像仓库**
+```
+docker push 所有人/镜像名:标签
+```
+
+**2.4 从DOCKERFILE构建镜像**
+```
+# 需要目录下有一个dockerfile
+docker build -t 镜像名:标签 .
+```
+
+**2.5 删除镜像**
+```
+docker rmi 镜像名:标签名
+```
+
+## 三、容器操作
+
+**3.1 进入已经存在的容器**
 ```
 docker exec -it 容器ID /bin/bash
 ```
 
-**2.2 删除已经停止的容器**
+**3.2 删除已经停止的容器**
 ```
 docker container prune
 ```
@@ -180,3 +183,57 @@ sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 
 docker-compose --version
 ```
+
+## 五、Docker网络模式
+
+**5.1 docker四种网络模式**
+
+```
+# 查看docker网络模式
+docker network ls
+
+# 桥接式网络模式
+Bridge contauner
+# 开放式网络模式
+Host(open) container   
+# 联合挂载式网络模式，是host网络模式的延伸
+Container(join) container
+# 封闭式网络模式
+None(Close) container
+
+# 指定容器使用的网络模式
+docker run --network 命令可以指定使用网络模式
+```
+
+**5.2 Bridge 网络模式**
+
+当Docker进程启动时，会在主机上创建一个名为docker0的虚拟网桥，此主机上启动的Docker容器会连接到这个虚拟网桥上，所以有默认地址172.17.0.0/16的地址。虚拟网桥的工作方式和物理交换机类似，这样主机上的所有容器就通过交换机连在了一个二层网络中。
+
+从docker0子网中分配一个IP给容器使用，并设置docker0的IP地址为容器的默认网关。在主机上创建一对虚拟网卡veth pair设备，Docker将veth pair设备的一端放在新创建的容器中，并命名为eth0（容器的网卡），另一端放在主机中，以vethxxx这样类似的名字命名，并将这个网络设备加入到docker0网桥中。可以通过brctl show命令查看。
+
+bridge模式是docker的默认网络模式，不写--net参数，就是bridge模式。使用docker run -p时，docker实际是在iptables做了DNAT规则，实现端口转发功能。可以使用iptables -t nat -vnL查看。
+
+图示:
+![bridge模式图示](https://store.xiaobu.site/store-blog/article-info/Snipaste_2022-03-25_20-51-51.png)
+
+**5.3 Host 网络模式**
+
+如果启动容器的时候使用host模式，那么这个容器将不会获得一个独立的Network Namespace，而是和宿主机共用一个Network Namespace。容器将不会虚拟出自己的网卡，配置自己的IP等，而是使用宿主机的IP和端口。但是，容器的其他方面，如文件系统、进程列表等还是和宿主机隔离的。
+
+图示:
+![Host模式](https://store.xiaobu.site/store-blog/article-info/1111.png)
+
+**5.4 Container网络模式**
+
+这个模式指定新创建的容器和已经存在的一个容器共享一个 Network Namespace，而不是和宿主机共享。新创建的容器不会创建自己的网卡，配置自己的 IP，而是和一个指定的容器共享 IP、端口范围等。同样，两个容器除了网络方面，其他的如文件系统、进程列表等还是隔离的。两个容器的进程可以通过 lo 网卡设备通信。
+
+图示:
+![Container模式](https://store.xiaobu.site/store-blog/article-info/fdfsfd.png)
+
+**5.5 None 网络模式**
+
+使用none模式，Docker容器拥有自己的Network Namespace，但是，并不为Docker容器进行任何网络配置。也就是说，这个Docker容器没有网卡、IP、路由等信息，只有lo 网络接口。需要我们自己为Docker容器添加网卡、配置IP等。
+
+不参与网络通信，运行于此类容器中的进程仅能访问本地回环接口；仅适用于进程无须网络通信的场景中，例如：备份、进程诊断及各种离线任务等。
+
+![None模式](https://store.xiaobu.site/store-blog/article-info/fff.png)
