@@ -1,7 +1,7 @@
 ---
-title: '[笔记]Reids'
+title: '[笔记]Redis'
 date: 2022-02-15 10:17:56
-excerpt: 'Reids使用过程中产生的笔记...'
+excerpt: 'Redis使用过程中产生的笔记...'
 tags: 笔记
 categories: 笔记
 ---
@@ -102,7 +102,7 @@ $ mkdir -p /docker/mount/redis-cluster/redis-node-3/data
 
 **3.2 修改各个配置文件**
 
-```
+```properties
 # 端口,可以使用默认
 port 6379
 # 开启集群功能
@@ -129,23 +129,23 @@ requirepass ******
 
 **3.3 创建Docker网络(使用单独的桥接模式网络)**
 
-```
+```shell
 $ docker network create redis-cluster
 ```
 
 **3.4 启动每个Redis实例**
 
-```
-$ docker run -v /docker/mount/redis-cluster/redis-node-1/conf/redis.conf:/usr/local/etc/redis/redis.conf -v /docker/mount/redis-cluster/redis-node-1/data/:/data --name redis-node-1 -p 6381:6379 --net redis-cluster -h redis-node-1 -d redis redis-server /usr/local/etc/redis/redis.conf
-$ docker run -v /docker/mount/redis-cluster/redis-node-2/conf/redis.conf:/usr/local/etc/redis/redis.conf -v /docker/mount/redis-cluster/redis-node-2/data/:/data --name redis-node-2 -p 6382:6379 --net redis-cluster -h redis-node-2 -d redis redis-server /usr/local/etc/redis/redis.conf
-$ docker run -v /docker/mount/redis-cluster/redis-node-3/conf/redis.conf:/usr/local/etc/redis/redis.conf -v /docker/mount/redis-cluster/redis-node-3/data/:/data --name redis-node-3 -p 6383:6379 --net redis-cluster -h redis-node-3 -d redis redis-server /usr/local/etc/redis/redis.conf
+```shell
+$ docker run -v /docker/mount/redis-cluster/redis-node-1/conf/redis.conf:/usr/local/etc/redis/redis.conf -v /docker/mount/redis-cluster/redis-node-1/data/:/data --name redis-node-1 -p 6381:6379 --privileged=true --net redis-cluster -h redis-node-1 -d redis redis-server /usr/local/etc/redis/redis.conf
+$ docker run -v /docker/mount/redis-cluster/redis-node-2/conf/redis.conf:/usr/local/etc/redis/redis.conf -v /docker/mount/redis-cluster/redis-node-2/data/:/data --name redis-node-2 -p 6382:6379 --privileged=true --net redis-cluster -h redis-node-2 -d redis redis-server /usr/local/etc/redis/redis.conf
+$ docker run -v /docker/mount/redis-cluster/redis-node-3/conf/redis.conf:/usr/local/etc/redis/redis.conf -v /docker/mount/redis-cluster/redis-node-3/data/:/data --name redis-node-3 -p 6383:6379 --privileged=true --net redis-cluster -h redis-node-3 -d redis redis-server /usr/local/etc/redis/redis.conf
 ```
 
 **3.5 获取每个容器的IP**
 
 *注意:创建集群时使用IP地址,使用主机名称会报错*
 
-```
+```shell
 $ docker inspect redis-node-1 | grep IPAddress
 $ docker inspect redis-node-2 | grep IPAddress
 $ docker inspect redis-node-3 | grep IPAddress
@@ -155,6 +155,29 @@ $ docker inspect redis-node-3 | grep IPAddress
 
 **3.6 使用redis-cli创建集群**
 
-docker run -it --net host --rm redis redis-cli --cluster create 172.18.0.2:6379  172.18.0.3:6379  172.18.0.4:6379 --cluster-replicas 0
+```shell
+$ docker exec -it redis-node-1 bash
+$ redis-cli --cluster create 172.18.0.2:6379  172.18.0.3:6379  172.18.0.4:6379 --cluster-replicas 0
+```
 
-redis-cli --cluster create 172.18.0.2:6379  172.18.0.3:6379  172.18.0.4:6379 --cluster-replicas 0 -a 19971123Zh_
+**3.7 集群设置密码**
+
+```shell
+# 进入其中一个容器
+$ docker exec -it redis-node-1 bash
+
+# 连接节点1,设置密码
+$ redis-cli -c -h redis-node-1
+$ config set requirepass ******
+$ config set masterauth  ******
+
+# 连接节点2,设置密码
+$ redis-cli -c -h redis-node-2
+$ config set requirepass ******
+$ config set masterauth  ******
+
+# 连接节点3,设置密码
+$ redis-cli -c -h redis-node-3
+$ config set requirepass ******
+$ config set masterauth  ******
+```
