@@ -30,6 +30,7 @@ categories: 搬运整理
 ![jstat -gc 20316](https://store.xiaobu.site/store-blog/article-info/jstat-gc.jpg)
 
 参数说明:
+
 | 序号 | 参数 | 说明 |
 | ---- | ---- | ---- |
 | 01 | S0C | 第一个幸存区的大小 |
