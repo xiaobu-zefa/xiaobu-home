@@ -6,8 +6,12 @@ keywords:
   - 猿对视
   - 技术文章
   - 福利资源
-  - 博客
   - 个人博客
+  - 小布cvg
+  - 小布
+  - 张桓
+  - 心得分享
+  - 搬运整理
 author: 张桓
 
 # 语言,时区
@@ -15,7 +19,11 @@ language: zh-CN
 timezone: Asia/Shanghai
 # URL
 url: https://blog.xiaobu.site
-permalink: ':year/:month/:day/:title/'
+# permalink: ':year/:month/:day/:title/'
+permalink: archives/:abbrlink.html
+abbrlink:
+  alg: crc32  # 算法：crc16(default) and crc32
+  rep: hex    # 进制：dec(default) and hex
 permalink_defaults: null
 pretty_urls:
   trailing_index: true
