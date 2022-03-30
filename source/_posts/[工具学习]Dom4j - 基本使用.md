@@ -1,9 +1,12 @@
 ---
 title: '[工具学习]Dom4j - 基本使用'
-date: 2018-03-15 00:00:00
 categories: 工具学习
 tags: 工具学习
-excerpt: 'dom4j是一个Java的XML API，是jdom的升级品，用来读写XML文件的。dom4j是一个十分优秀的JavaXML API，具有性能优异、功能强大和极其易使用的特点，它的性能超过sun公司官方的dom技术，同时它也是一个开放源代码的软件，可以在SourceForge上找到它...'
+excerpt: >-
+  dom4j是一个Java的XML API，是jdom的升级品，用来读写XML文件的。dom4j是一个十分优秀的JavaXML
+  API，具有性能优异、功能强大和极其易使用的特点，它的性能超过sun公司官方的dom技术，同时它也是一个开放源代码的软件，可以在SourceForge上找到它...
+abbrlink: 4b463b58
+date: 2018-03-15 00:00:00
 ---
 ## 一、maven依赖
 

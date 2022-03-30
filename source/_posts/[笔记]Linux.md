@@ -1,9 +1,10 @@
 ---
 title: '[笔记]Linux'
-date: 2021-01-03 02:34:17
-excerpt: 'Linux使用过程中产生的笔记...'
+excerpt: Linux使用过程中产生的笔记...
 tags: 笔记
 categories: 笔记
+abbrlink: d5a339b9
+date: 2021-01-03 02:34:17
 ---
 
 ## 一、系统信息查看相关

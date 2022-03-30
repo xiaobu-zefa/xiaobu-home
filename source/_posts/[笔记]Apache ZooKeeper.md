@@ -1,9 +1,10 @@
 ---
 title: '[笔记]Apache ZooKeeper'
-date: 2022-01-01 00:00:00
-excerpt: 'Apache ZooKeeper 使用过程中产生的笔记...'
+excerpt: Apache ZooKeeper 使用过程中产生的笔记...
 tags: 笔记
 categories: 笔记
+abbrlink: a15ea65
+date: 2022-01-01 00:00:00
 ---
 
 ## (一) 基本命令

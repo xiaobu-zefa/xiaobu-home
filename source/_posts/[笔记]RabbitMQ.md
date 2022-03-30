@@ -1,9 +1,10 @@
 ---
 title: '[笔记]RabbitMQ'
-date: 2022-02-16 16:32:08
-excerpt: 'RabbitMQ使用过程中产生的笔记...'
+excerpt: RabbitMQ使用过程中产生的笔记...
 tags: 笔记
 categories: 笔记
+abbrlink: 69af257b
+date: 2022-02-16 16:32:08
 ---
 
 ## 一、Docker部署单实例RabbitMQ

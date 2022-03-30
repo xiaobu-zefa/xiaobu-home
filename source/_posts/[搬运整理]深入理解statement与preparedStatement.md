@@ -1,9 +1,10 @@
 ---
 title: '[搬运整理]深入理解statement与preparedStatement'
-date: 2022-03-15 14:10:00
-excerpt: '大家平时都使用过JDBC中的PreparedStatement接口，它有预编译功能。什么是预编译功能呢？它有什么好处呢？...'
+excerpt: 大家平时都使用过JDBC中的PreparedStatement接口，它有预编译功能。什么是预编译功能呢？它有什么好处呢？...
 tags: 搬运整理
 categories: 搬运整理
+abbrlink: 63e9e04
+date: 2022-03-15 14:10:00
 ---
 
 ## (一) 前言

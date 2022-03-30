@@ -1,9 +1,10 @@
 ---
 title: '[笔记]Redis'
-date: 2022-02-15 10:17:56
-excerpt: 'Redis使用过程中产生的笔记...'
+excerpt: Redis使用过程中产生的笔记...
 tags: 笔记
 categories: 笔记
+abbrlink: 3c97aee1
+date: 2022-02-15 10:17:56
 ---
 
 ## 一、Docker部署单机Redis

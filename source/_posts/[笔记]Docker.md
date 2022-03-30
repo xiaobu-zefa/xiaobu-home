@@ -1,9 +1,10 @@
 ---
 title: '[笔记]Docker'
-date: 2021-01-01 02:34:17
-excerpt: 'Docker使用过程中产生的笔记...'
+excerpt: Docker使用过程中产生的笔记...
 tags: 笔记
 categories: 笔记
+abbrlink: a6cc1afa
+date: 2021-01-01 02:34:17
 ---
 
 ## 一、配置阿里云镜像加速

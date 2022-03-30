@@ -1,9 +1,10 @@
 ---
 title: '[笔记]JDBC'
-date: 2018-02-10 02:34:17
-excerpt: 'JDBC使用过程中产生的笔记...'
+excerpt: JDBC使用过程中产生的笔记...
 tags: 笔记
 categories: 笔记
+abbrlink: 2f675924
+date: 2018-02-10 02:34:17
 ---
 
 ## (一) maven依赖

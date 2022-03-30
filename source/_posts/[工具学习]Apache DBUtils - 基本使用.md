@@ -1,9 +1,10 @@
 ---
 title: '[工具学习]Apache DBUtils - 基本使用'
-date: 2018-03-10 00:00:00
 categories: 工具学习
 tags: 工具学习
-excerpt: 'DBUtils简化了JDBC的开发步骤，使得我们可以用更少量的代码实现连接数据库的功能...'
+excerpt: DBUtils简化了JDBC的开发步骤，使得我们可以用更少量的代码实现连接数据库的功能...
+abbrlink: 830a77cb
+date: 2018-03-10 00:00:00
 ---
 
 ## 一、maven依赖

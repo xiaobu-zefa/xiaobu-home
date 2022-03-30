@@ -1,9 +1,10 @@
 ---
 title: '[笔记]Alibaba Nacos'
-date: 2022-02-14 17:00:00
-excerpt: 'Alibaba Nacos使用过程中产生的笔记...'
+excerpt: Alibaba Nacos使用过程中产生的笔记...
 tags: 笔记
 categories: 笔记
+abbrlink: c15abc23
+date: 2022-02-14 17:00:00
 ---
 
 ## 一、Docker部署单实例Nacos(MySQL存储)
