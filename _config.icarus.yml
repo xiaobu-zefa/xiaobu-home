@@ -173,12 +173,12 @@ donates:
     -
         type: alipay
         # Alipay qrcode image URL
-        qrcode: 'https://store.xiaobu.site/store-blog/%E6%94%AF%E4%BB%98%E5%AE%9D%E6%94%B6%E6%AC%BE.jpg'
+        qrcode: 'https://store.xiaobu.site/alipay-code.png'
     # Wechat donate button configurations
     -
         type: wechat
         # Wechat qrcode image URL
-        qrcode: 'https://store.xiaobu.site/store-blog/%E5%BE%AE%E4%BF%A1%E6%94%B6%E6%AC%BE.jpg'
+        qrcode: 'https://store.xiaobu.site/wechatpay-code.png'
 # Share plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Share/
 share:
