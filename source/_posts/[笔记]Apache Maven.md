@@ -27,3 +27,6 @@ for /r %i in (*.lastUpdated) do del %i
 查找父模块时，默认顺序：relativePath > 本地仓库 > 远程仓库
 没有 relativePath 标签等同 …/pom.xml, 即默认从当前 pom 文件的上一级目录找
 一个空 <relativePath/> 表示直接从本地仓库 > 远程仓库获取
+
+![图 3](https://store.xiaobu.site/1.png)  
+
