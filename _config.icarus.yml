@@ -1,125 +1,82 @@
-# Version of the configuration file
+################################################################# 基本设置>>> #################################################################
+# 这个版本号与主题版本号相关却不总是相同。 Icarus使用此版本号来决定是否升级默认主题配置文件。 请不要自己更改这个版本号。
 version: 4.0.0
-# Icarus theme variant, can be "default" or "cyberpunk"
+# 通过此设置为Icarus更换”皮肤“。 此设置目前支持”default“和”cyberpunk“两种值。
 variant: default
-# Path or URL to the website's logo
+# 设置你站点的logo。 此logo会显示在导航栏和页脚。 logo配置的值既可以是你的logo图片的路径或URL地址
 logo:
     text: 猿对视
-# Page metadata configurations
+
+
+################################################################# 头部信息>>> #################################################################
 head:
-    # URL or path to the website's icon
+    # 你可以在head配置中指定你的网站favicon的路径或URL地址。
     favicon: https://store.xiaobu.site/store-blog/%E7%BD%91%E7%AB%99favicon.png
-    # Web application manifests configuration
-    # https://developer.mozilla.org/en-US/docs/Web/Manifest
     manifest:
-        # Name of the web application (default to the site title)
         name:
-        # The displayed name of the web application
-        # when there is not enough space to display full name
         short_name:
-        # The start URL of the web application
         start_url:
-        # The default theme color for the application
         theme_color:
-        # A placeholder background color for the application page to display
-        # before its stylesheet is loaded
         background_color:
-        # The preferred display mode for the website
         display: standalone
-        # Image files that can serve as application icons for different contexts
         icons:
             -
-                # The path to the image file
                 src: ''
-                # A string containing space-separated image dimensions
                 sizes: ''
-                # A hint as to the media type of the image
                 type:
-    # Open Graph metadata
-    # https://hexo.io/docs/helpers.html#open-graph
     open_graph:
-        # Page title (og:title) (optional)
-        # You should leave this blank for most of the time
         title:
-        # Page type (og:type) (optional)
-        # You should leave this blank for most of the time
         type: blog
-        # Page URL (og:url) (optional)
-        # You should leave this blank for most of the time
         url:
-        # Page cover (og:image) (optional)
-        # You should leave this blank for most of the time
         image:
-        # Site name (og:site_name) (optional)
-        # You should leave this blank for most of the time
         site_name:
-        # Page author (article:author) (optional)
-        # You should leave this blank for most of the time
         author:
-        # Page description (og:description) (optional)
-        # You should leave this blank for most of the time
         description:
-        # Twitter card type (twitter:card)
         twitter_card:
-        # Twitter ID (twitter:creator)
         twitter_id:
-        # Twitter Site (twitter:site)
         twitter_site:
-        # Google+ profile link (deprecated)
         google_plus:
-        # Facebook admin ID
         fb_admins:
-        # Facebook App ID
         fb_app_id:
-    # Structured data of the page
-    # https://developers.google.com/search/docs/guides/intro-structured-data
     structured_data:
-        # Page title (optional)
-        # You should leave this blank for most of the time
         title:
-        # Page description (optional)
-        # You should leave this blank for most of the time
         description:
-        # Page URL (optional)
-        # You should leave this blank for most of the time
         url:
-        # Page author (article:author) (optional)
-        # You should leave this blank for most of the time
         author:
-        # Page publisher (optional)
-        # You should leave this blank for most of the time
         publisher:
-        # Page publisher logo (optional)
-        # You should leave this blank for most of the time
         publisher_logo:
-        # Page images (optional)
-        # You should leave this blank for most of the time
         image:
-    # Additional HTML meta tags in an array
+    # 你可以通过head部分的meta设置来向生成的HTML中添加自定义<meta>标签。 
+    # 每一个meta标签应作为meta数组中的一个元素出现。 meta设置每一个元素的值应为<属性名>=<属性值>的格式，其中属性名和属性值分别代表着<meta>标签的属性和值。 
+    # 如果<meta>标签有多个属性和值，请使用;来分隔<属性名>=<属性值>。
     meta:
-        # Meta tag specified in <attribute>=<value> style
-        # E.g., name=theme-color;content=#123456 => <meta name="theme-color" content="#123456">
         - 'name=baidu-site-verification;content=code-ndhw3AOHAW'
         - 'name=msvalidate.01;content=7671B107F29B9E324D8178E90EF2F2C0'
-    # URL or path to the website's RSS atom.xml
+    # 你可以通过head部分的rss设置来添加RSS链接信息。
     rss:
-# Page top navigation bar configurations
+
+
+################################################################# 导航信息>>> #################################################################
+# navbar部分定义了导航栏中的菜单与链接。 你可以通过向menu设置项中添加<链接名>: <链接URL>的方式添加任意导航栏菜单链接。 
+# 如要向导航栏右侧添加链接，请向links设置项中添加<链接名>: <链接URL>。
 navbar:
-    # Navigation menu items
+    # 导航栏菜单项
     menu:
         首页: /
         归档: /archives
         目录: /categories
         标签: /tags
         关于: /about
-    # Links to be shown on the right of the navigation bar
+    # 导航栏右侧的链接
     links:
         Show on GitHub:
             icon: fab fa-github
             url: https://github.com/xiaobucvg/xiaobucvg.github.io
-# Page footer configurations
+
+
+################################################################# 页脚信息>>> #################################################################
+# footer部分定义了页脚右侧的链接。 链接的配置格式与navbar中links的配置格式完全一致。
 footer:
-    # Links to be shown on the right of the footer section
     links:
         Creative Commons:
             icon: fab fa-creative-commons
@@ -130,22 +87,16 @@ footer:
         Download on GitHub:
             icon: fab fa-github
             url: https://github.com/ppoffice/hexo-theme-icarus
-# Article related configurations
+
+
+################################################################# 文章信息>>> #################################################################
 article:
-    # Code highlight settings
     highlight:
-        # Code highlight themes
-        # https://github.com/highlightjs/highlight.js/tree/master/src/styles
         theme: atom-one-light
-        # Show copy code button
         clipboard: true
-        # Default folding status of the code blocks. Can be "", "folded", "unfolded"
         fold: unfolded
-    # Whether to show estimated article reading time
     readtime: true
-    # Whether to show updated time. For "auto", shows article update time only when page.updated is set and it is different from page.date
     update_time: true
-    # Article licensing block
     licenses:
         Creative Commons:
             icon: fab fa-creative-commons
@@ -156,67 +107,56 @@ article:
         Noncommercial:
             icon: fab fa-creative-commons-nc
             url: https://creativecommons.org/licenses/by-nc/4.0/
-# Search plugin configurations
-# https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Search/
+
+
+################################################################# 搜索设置>>> #################################################################
 search:
     type: insight
-# Comment plugin configurations
-# https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Comment/
+
+
+################################################################# 评论设置>>> #################################################################
 comment:
     type: changyan
     app_id: cyvTVPTGl
     conf: prod_563b1ba96a580cfc4e456ab0bf59d3de
-# Donate plugin configurations
-# https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Donation/
+
+
+################################################################# 捐献设置>>> #################################################################
 donates:
-    # Alipay donate button configurations
     -
         type: alipay
-        # Alipay qrcode image URL
         qrcode: 'https://store.xiaobu.site/alipay-code.png'
-    # Wechat donate button configurations
     -
         type: wechat
-        # Wechat qrcode image URL
         qrcode: 'https://store.xiaobu.site/wechatpay-code.png'
-# Share plugin configurations
-# https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Share/
+
+
+################################################################# 分享设置>>> #################################################################
 share:
     type: addtoany
-# Sidebar configurations.
-# Please be noted that a sidebar is only visible when it has at least one widget
+
+
+################################################################# 侧栏设置>>> #################################################################
 sidebar:
-    # Left sidebar configurations
     left:
-        # Whether the sidebar sticks to the top when page scrolls
         sticky: true
-    # Right sidebar configurations
     right:
-        # Whether the sidebar sticks to the top when page scrolls
         sticky: true
-# Sidebar widget configurations
-# http://ppoffice.github.io/hexo-theme-icarus/categories/Widgets/
+
+
+################################################################# 挂件设置>>> #################################################################
 widgets:
-    # Profile widget configurations
+    # 作者资料卡
     -
-        # Where should the widget be placed, left sidebar or right sidebar
         position: left
         type: profile
-        # Author name
         author: BLOG.zhanghuan
-        # Author title
         author_title: Web Developer
-        # Author's current location
         location: China,shandong qingdao
-        # URL or path to the avatar image
         avatar: https://avatars.githubusercontent.com/u/24698787?v=4
-        # Whether show the rounded avatar image
         avatar_rounded: true
-        # Email address for the Gravatar
         gravatar:
-        # URL or path for the follow button
         follow_link: https://github.com/xiaobucvg
-        # Links to be shown on the bottom of the profile widget
         social_links:
             Github:
                 icon: fab fa-github
@@ -230,147 +170,87 @@ widgets:
             Email:
                 icon: fas fa-envelope
                 url: mailto:www.1714005186@gmail.com
-    # Table of contents widget configurations
+    # 文章目录
     -
-        # Where should the widget be placed, left sidebar or right sidebar
         position: left
         type: toc
-        # Whether to show the index of each heading
         index: true
-        # Whether to collapse sub-headings when they are out-of-view
         collapsed: true
-        # Maximum level of headings to show (1-6)
         depth: 3
-    # Recommendation links widget configurations
+    # 友站链接
     -
-        # Where should the widget be placed, left sidebar or right sidebar
         position: left
         type: links
-        # Names and URLs of the sites
         links:
             '[技术支持]Hexo': https://hexo.io
             '[技术支持]Bulma': https://bulma.io
-    # Categories widget configurations
+    # 文章分类
     -
-        # Where should the widget be placed, left sidebar or right sidebar
         position: right
         type: categories
-    # Recent posts widget configurations
+    # 最新文章
     -
-        # Where should the widget be placed, left sidebar or right sidebar
         position: right
         type: recent_posts
-    # Archives widget configurations
+    # 文章归档
     -
-        # Where should the widget be placed, left sidebar or right sidebar
         position: right
         type: archives
-    # Tags widget configurations
+    # 文章标签
     -
-        # Where should the widget be placed, left sidebar or right sidebar
         position: right
         type: tags
-    # Google AdSense unit configurations
-    #    -
-    #        # Where should the widget be placed, left sidebar or right sidebar
-    #        position: left
-    #        type: adsense
-    #        # AdSense client ID
-    #        client_id: ''
-    #        # AdSense AD unit ID
-    #        slot_id: ''
-    # Follow.it email subscription widget configurations
-    # -
-    #     # Where should the widget be placed, left sidebar or right sidebar
-    #     position: left
-    #     type: followit
-    #     # Hint text under the email input
-    #     description:
-    #     # Subscription form action URL
-    #     action_url: ''
-    #     # Feed claiming verification code
-    #     verification_code: ''
-# Plugin configurations
-# https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/
+
+
+################################################################# 插件设置>>> #################################################################
 plugins:
-    # Enable page startup animations
+    # 网页载入动画
     animejs: true
-    # Show the "back to top" button
+    # 回到顶部
     back_to_top: true
-    # Baidu Analytics plugin settings
-    # https://tongji.baidu.com
+    # 百度分析
     baidu_analytics:
-        # Baidu Analytics tracking ID
         tracking_id: aecc9e08d716b19081eaf6963e648f46
-    # Bing Webmaster Tools plugin settings
-    # https://www.bing.com/toolbox/webmaster/
+    # BING分析
     bing_webmaster:
-        # Bing Webmaster Tools tracking ID in the <meta> tag
         tracking_id:
-    # BuSuanZi site/page view counter
-    # https://busuanzi.ibruce.info
+    # 不算子
     busuanzi: false
-    # CNZZ statistics
-    # https://www.umeng.com/web
     cnzz:
-        # CNZZ tracker id
         id:
-        # CNZZ website id
         web_id:
-    # Alerting users about the use of cookies
-    # https://www.osano.com/cookieconsent/
+    # Cookie同意提示
     cookie_consent:
-        # The compliance type. Can be "info", "opt-in", or "opt-out"
         type: info
-        # Theme of the popup. Can be "block", "edgeless", or "classic"
         theme: edgeless
-        # Whether the popup should stay static regardless of the page scrolls
         static: false
-        # Where on the screen the consent popup should display
         position: bottom-left
-        # URL to your site's cookie policy
+        # 你网站的Cookie协议的URL
         policyLink: https://www.cookiesandyou.com/
-    # Enable the lightGallery and Justified Gallery plugins
+    # 画廊
     gallery: true
-    # Google Analytics plugin settings
-    # https://analytics.google.com
+    # 谷歌分析
     google_analytics:
-        # Google Analytics tracking ID
         tracking_id:
-    # Hotjar user feedback plugin
-    # https://www.hotjar.com/
     hotjar:
-        # Hotjar site id
         site_id:
-    # Enable the KaTeX math typesetting support
-    # https://katex.org/
+    # 渲染数学公式
     katex: false
-    # Enable the MathJax math typesetting support
-    # https://www.mathjax.org/
+    # 渲染数学公式
     mathjax: false
-    # Enable the Outdated Browser plugin
-    # http://outdatedbrowser.com/
+    # 浏览器升级提醒
     outdated_browser: true
-    # Show a progress bar at top of the page on page loading
+    # 网页载入进度条
     progressbar: true
-    # Statcounter statistics
-    # https://statcounter.com/
     statcounter:
-        # Statcounter project id
         project:
-        # Statcounter project security code
         security:
-    # Twitter conversion tracking plugin settings
-    # https://business.twitter.com/en/help/campaign-measurement-and-analytics/conversion-tracking-for-websites.html
     twitter_conversion_tracking:
-        # Twitter Pixel ID
         pixel_id:
-# CDN provider settings
-# https://ppoffice.github.io/hexo-theme-icarus/Configuration/Theme/speed-up-your-site-with-custom-cdn/
+
+
+################################################################# CDN设置>>> #################################################################
 providers:
-    # Name or URL template of the JavaScript and/or stylesheet CDN provider
     cdn: loli
-    # Name or URL template of the webfont CDN provider
     fontcdn: loli
-    # Name or URL of the fontawesome icon font CDN provider
     iconcdn: loli
