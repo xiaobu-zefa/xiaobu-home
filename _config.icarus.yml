@@ -5,7 +5,7 @@ version: 4.0.0
 variant: default
 # 设置你站点的logo。 此logo会显示在导航栏和页脚。 logo配置的值既可以是你的logo图片的路径或URL地址
 logo:
-    text: 猿对视
+    text: xiaobu-home
 
 
 ################################################################# 头部信息>>> #################################################################
@@ -71,7 +71,7 @@ navbar:
     links:
         Show on GitHub:
             icon: fab fa-github
-            url: https://github.com/xiaobucvg/xiaobucvg.github.io
+            url: https://github.com/xiaobucvg/xiaobu-home
 
 
 ################################################################# 页脚信息>>> #################################################################
@@ -156,11 +156,11 @@ widgets:
         avatar: https://avatars.githubusercontent.com/u/24698787?v=4
         avatar_rounded: true
         gravatar:
-        follow_link: https://github.com/xiaobucvg
+        follow_link: https://github.com/xiaobu-zefa
         social_links:
             Github:
                 icon: fab fa-github
-                url: https://github.com/xiaobucvg
+                url: https://github.com/xiaobu-zefa
             Zhihu:
                 icon: fab fa-zhihu
                 url: https://www.zhihu.com/people/aaaa-gui-gui
